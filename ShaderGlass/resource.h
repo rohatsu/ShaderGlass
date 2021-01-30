@@ -6,11 +6,14 @@
 #define IDD_SHADERGLASS_DIALOG          102
 #define IDS_APP_TITLE                   103
 #define IDM_ABOUT                       104
+#define IDC_SHADERPARAMS                104
 #define IDM_EXIT                        105
+#define IDS_PARAM_TITLE                 105
 #define IDI_SHADERGLASS                 107
 #define IDI_SMALL                       108
 #define IDC_SHADERGLASS                 109
 #define IDM_PIXELSIZE_NEXT              110
+#define IDM_UPDATE_PARAMS               111
 #define IDR_MAINFRAME                   128
 #define ID_FILE_START                   32771
 #define IDM_FILE_START                  32772
@@ -110,6 +113,8 @@
 #define ID_PROCESSING_SAVEPROFILEAS     32874
 #define IDM_PROCESSING_LOADPROFILE      32875
 #define IDM_PROCESSING_SAVEPROFILEAS    32876
+#define ID_SHADER_PARAMETERS            32877
+#define IDM_SHADER_PARAMETERS           32878
 #define IDC_STATIC                      -1
 
 // Next default values for new objects
@@ -118,8 +123,8 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NO_MFC                     1
 #define _APS_NEXT_RESOURCE_VALUE        129
-#define _APS_NEXT_COMMAND_VALUE         32877
+#define _APS_NEXT_COMMAND_VALUE         32879
 #define _APS_NEXT_CONTROL_VALUE         1000
-#define _APS_NEXT_SYMED_VALUE           111
+#define _APS_NEXT_SYMED_VALUE           112
 #endif
 #endif

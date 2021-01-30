@@ -611,6 +611,9 @@ LRESULT CALLBACK ShaderWindow::WndProc(HWND hWnd, UINT message, WPARAM wParam, L
             UpdateWindowState();
         }
         break;
+        case IDM_SHADER_PARAMETERS:
+            ShowWindow(m_paramsWindow, SW_SHOW);
+            return 0;
         case IDM_TOGGLEMENU:
             if(GetMenu(hWnd))
                 SetMenu(hWnd, NULL);
@@ -899,7 +902,7 @@ bool ShaderWindow::Create(_In_ HINSTANCE hInstance, _In_ int nCmdShow)
     return TRUE;
 }
 
-void ShaderWindow::Start(_In_ LPWSTR lpCmdLine)
+void ShaderWindow::Start(_In_ LPWSTR lpCmdLine, HWND paramsWindow)
 {
     // auto-start
     if(lpCmdLine)
@@ -909,5 +912,7 @@ void ShaderWindow::Start(_In_ LPWSTR lpCmdLine)
             LoadProfile(std::string(ws.begin(), ws.end()));
     }
 
+    m_paramsWindow = paramsWindow;
     SendMessage(m_mainWindow, WM_COMMAND, IDM_START, 0);
+    SendMessage(m_paramsWindow, WM_COMMAND, IDM_UPDATE_PARAMS, 0);
 }
